@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的网站</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .card-content {
+            padding: 15px;
+        }
+        .card-content a {
+            display: block;
+            color: #333;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .card-content a:hover {
+            text-decoration: underline;
+        }
+        .search-box {
+            padding: 20px;
+            text-align: center;
+        }
+        .search-box input[type="text"] {
+            padding: 10px;
+            margin-right: 10px;
+            width: 200px;
+        }
+        .search-box input[type="submit"] {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        nav {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 5px;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="https://huixiao666.github.io/A/">首页</a>
+    </nav>
+
+    <div class="search-box">
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="搜索应用...">
+            <input type="submit" value="搜索">
+        </form>
+    </div>
+
+    <div class="container" id="appContainer">
+        <!-- Cards will be dynamically inserted here -->
+        <div class="card">
+            <div class="card-header">鹊桥VPN.apk</div>
+            <div class="card-content">
+                <p>内置随机ID，用完重置无限白嫖。每次3天</p>
+                <a href="https://share.feijipan.com/s/0wCzwubF">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">笔趣阁纯净版.apk</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/OUCzynqk">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">书旗小说v12.2.2本地会员版@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/2pCzf0oH">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">AI动漫头像生成_1.71.32.apk</div>
+            <div class="card-content">
+                <p>用不了，挂VPN</p>
+                <a href="https://share.feijipan.com/s/CuCzzSMF">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">概念画板v2024.08.5高级版@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/zNCzfcVz">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">囧次元去广告.apk</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/xOCzjG0k">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">kk键盘.apk</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/mgCzjrZg">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">追书神器v4.85.53纯净版@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/sVGCzm8w0">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">影剪辑视频编辑v1_6_8高级版@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/CDCzmI2H">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">爱笔思画X_v12.2.1高级版@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/EdCznbvM">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">个人图书馆v7.6.7高级版@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/zjCznS1N">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">小马模拟器_2_56_比小鸡模拟器更好用的免费模拟器</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/uhCzpUb4">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">星神少女.apk</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/oYC5ZO62">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">与女大学生的同居生活.apk</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/5JCxwKZh">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">橙子喵酱【65套合集】</div>
+            <div class="card-content">
+                <a href="magnet:?xt=urn:btih:759667A96551582D51FCB8959B0A63D30798F03C&x._t-v1=532804206747190633">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">三只羊</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/KUCzGwOR">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">聆韵听书_1.0.7_去广告</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/yMCg0q8h">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">拷贝漫画 v2.3.3去广告纯净版</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/uwCg0IsW">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">次元站v1.2.4.5纯净版@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/1ICgMEXf">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">今日头条v10.0.1纯净版@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/zACgMOFr">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">考霸刷题宝v1.6.6高级版@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/b5CgMMPS">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">轻瑜伽_v1.0.2</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/JmCgMQBD">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">趣头条v3.20.61去广告@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/KcCgM2eS">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">速度下载 Ver.1.0.8 会员解锁版</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/xXCgNhNx">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">淘小说v10.2.2@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/2ICgNS8x">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">扫描王全能宝v6.8.31高级版@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/08CgOUwY">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">澎湃新闻v10.0.3纯净版@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/6sCgOHsX">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">网易新闻v111.1绿色版@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/geCgOP8q">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">腾讯微视v8.127.0.590纯净版@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/zzCgOYiF">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">微剪辑v13.3.2会员版@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/GICgOQZe">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">腾讯新闻v7.5.00纯净版@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/MPCgO4rr">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+                        <div class="card-header">小红书v8.52.0纯净版@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/5PCgOaeQ">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">央视影音v7.9.11纯净版@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/ZzCgO7Mk">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">最右v6.2.3纯净版@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/VICgOgb8">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">P2P下载器Plus_v1.3.4高级版@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/GpCgOiR2">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">pixiv_v6.122.0高级版@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <p>挂梯子</p>
+                <a href="https://share.feijipan.com/s/AeCgOoSl">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">VMOS Pro_3.0.7(30007001)-opt@鹿蜀</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/eLCgOrna">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">CCleaner Pro v24.18.0</div>
+            <div class="card-content">
+                <p>清理垃圾</p>
+                <a href="https://share.feijipan.com/s/HKCgOuDK">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">新浪新闻v8.30.4纯净版@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/MgCgOLVO">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">Picturize It v1.2.0 PREMIUM</div>
+            <div class="card-content">
+                <p>图片转漫画</p>
+                <a href="https://share.feijipan.com/s/piCgOSnm">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">轻小说文库v1.21@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/IACgPCPM">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">比特船v1.3.7去限制版@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/rZCgPEjv">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">古诗文网 3.6.4</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/AuCgPMas">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">星芽免费短剧3.6.0.1</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/ckCgPZ4Y">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">樱花动漫v2_6_3第三方出品无广告@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/jOCgP3bo">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">人妻博主</div>
+            <div class="card-content">
+                                <a href="https://share.feijipan.com/s/xoC8AbLG">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">神笔马良v2.3.6.8会员版@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/18CgPdTv">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">AI_Browser_v1_1_8电视端浏览器@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/JhCgP6pj">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">中草药宝典_v2.5</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/ZYCgP7b9">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">环球时报v13.1.0@𝒇𝒖𝒏_𝒂𝒑𝒌</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/dcCgPvIT">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">AuroraStore_4.6.1 第三方谷歌商店软件平台</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/r6CgPg66">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">Avast Cleanup_v24.18.0(800010832) 清理垃圾软件</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/vrCgPirz">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">GIF Maker v1.1.0 PREMIUM</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/41CgPluV">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">WDownloader_1.5.38_视频下载器</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/W2CgPoWU">点击下载</a>
+            </div>
+        </div>
+         <div class="card">
+            <div class="card-header">绝区零 鲨鱼妹🦈 艾莲嗨纟</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/lFCfcBEa">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">原神 甘雨 高质量</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/3xCgxGE5">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">炼丹家AI解锁全部！</div>
+            <div class="card-content">
+                <p>登录就是VIP会员</p>
+                <a href="https://share.feijipan.com/s/c1CgxH64">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">抖音成人版</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/M2CgxPyr">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">吃鸡成人版_9.9.9_解锁版</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/C0CgxYmw">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">大湿兄-免费</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/9rCgxWi0">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">免费推特</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/mvCgx2y6">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">十八摸_9.9.9_解锁版</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/NeCgxan5">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">陌陌视频</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/CACgx6Iy">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">糖心破解版</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/CwCgx9ih">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">xcartoon</div>
+            <div class="card-content">
+                <p>正经漫画</p>
+                <a href="https://share.feijipan.com/s/JGCgxfPB">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">XVIDEOS_9.9.9</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/AdCgxhnO">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">Pronhub免费</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/AdCgxsmA">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">SOUL免费破解版</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/wdCgxuFu">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">SWAG_9.9.9_解锁版</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/cWCgyTyp">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">YouTube成人版</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/1ICgyCYP">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">触手的爱巢冷狐版</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/ysCgyW2Z">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">痴漢的猎物1.0</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/JlCgy3Og">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">阿米莉多次堕落</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/jICgycOq">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">八代木津奈1.0XY版安卓</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/AMCgy7cJ">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            
+            <div class="card-header">家出少女 One room</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/YxCgy9nc">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">花痴驯兽师0.57</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/6vCgyvf9">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">公共生活H0.78</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/JqCgyxEH">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">塔楼1.0</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/tbCgyf9H">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">揭开八月的面纱0.3.04</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/sBCgyhZW">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">Devil Girl</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/2KCgyj2u">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">りとラブ_ダウナー少女が甘え狂うラブラブ純愛なほんのり甘い恋の調べ_v1_0</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/NwCgylFm">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">乳魔之馆安卓</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/vtCgyoGf">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">怪异觉风录v1.01</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/SPCgyqmA">点击下载</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">学校怪谈修复版</div>
+            <div class="card-content">
+                <a href="https://share.feijipan.com/s/dkCgyrPs">点击下载</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const searchQuery = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                const cardHeader = card.querySelector('.card-header').textContent.toLowerCase();
+                if (cardHeader.includes(searchQuery) || card.textContent.toLowerCase().includes(searchQuery)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
